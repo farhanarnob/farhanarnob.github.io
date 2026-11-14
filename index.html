@@ -315,12 +315,6 @@ p{margin:0 0 14px;max-width:68ch}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 
 /* Research progression */
-.steps{list-style:none;padding:0;margin:18px 0 8px;max-width:70ch}
-.steps li{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--rule)}
-.steps li:last-child{border-bottom:1px solid var(--rule)}
-.steps .when{font-family:var(--serif);font-size:20px;color:var(--accent);line-height:1.3}
-.steps h3{margin:0 0 4px;font-size:18px}
-.steps p{margin:0;font-size:16px}
 
 /* Publications */
 .pubs{list-style:none;padding:0;margin:8px 0 0;max-width:72ch}
@@ -451,38 +445,17 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding-top:20px;font-si
 
     <section id="research" aria-labelledby="research-h">
       <h2 id="research-h">Research</h2>
-      <p>Large software projects receive thousands of bug reports, and someone has to decide who should fix each one. When that call is wrong, the report gets passed from developer to developer and the fix waits. My dissertation builds models that make this routing decision from the report text, the project's records about components and teams, and its commit history. I test them the way they would be used in practice: trained on the past and evaluated on reports that come later.</p>
-      <ol class="steps">
-        <li>
-          <span class="when">2025</span>
-          <div>
-            <h3>Commit messages as a signal</h3>
-            <p>Adding developers' commit messages to an XLNet model raised Top-1 accuracy on Firefox from 23.28% to 69.45%, and on Eclipse from 47.89% to 84.88%.</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">2026</span>
-          <div>
-            <h3>A model a project could deploy</h3>
-            <p>A hybrid transformer combining report text with project metadata reached 69.02% Top-1 and 90.69% Top-10 accuracy on 25,220 Firefox reports. Text and metadata alone reach 99.6% of the full model, so it still works when no commit history exists yet.</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">2026</span>
-          <div>
-            <h3>Learning how reports really move</h3>
-            <p>A learning-to-rank framework (LightGBM LambdaMART) with an implicit routing graph, evaluated in strict chronological order on Firefox, Chromium and Eclipse. It reached 75.5%, 47.7% and 65.4% Top-1 accuracy against 42.0%, 22.9% and 43.1% for a tossing-graph baseline. Under review.</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">Next</span>
-          <div>
-            <h3>Routing that keeps up with real teams</h3>
-            <p>Handling newcomers with little history, changing teams, developer workload and signals from the code itself.</p>
-          </div>
-        </li>
-      </ol>
-      <p class="small muted">Other interests: mining software repositories, mobile and context-aware systems, and software testing. In the lab I also extended and rebuilt our mobile app and server for collecting smartphone context data. My experiments run on the Lonestar6 supercomputer at the Texas Advanced Computing Center through an NSF ACCESS allocation awarded to Dr. Bryce; I prepared the proposal and am its sole research user.</p>
+      <p>Large software projects receive thousands of bug reports, and someone has to decide who should fix each one. When that call is wrong, the report gets passed from developer to developer and the fix waits. My dissertation builds machine learning models that make this routing decision from the report text, the project's records about components and teams, and its commit history, and tests them the way they would be used in practice: trained on the past and evaluated on reports that come later.</p>
+      <h3>Doctoral research, University of North Texas (2023–present)</h3>
+      <ul class="duties">
+        <li><b>Designed</b> an encoder-agnostic hybrid transformer (RoBERTa, CodeBERT, DeBERTa) that combines bug-report text with 7 categorical and 9 numerical metadata features; it reached 69.02% Top-1 and 90.69% Top-10 accuracy on 25,220 Mozilla Firefox bug reports across 285 developers, a 15.18-point Top-1 gain over a text-only baseline (SEKE 2026).</li>
+        <li><b>Introduced</b> training-only commit-message augmentation, which keeps models deployable for newly filed bugs; an earlier XLNet model with commit messages raised Firefox Top-1 accuracy from 23.28% to 69.45% (ITNG 2025).</li>
+        <li><b>Built</b> a routing-aware learning-to-rank framework (LightGBM LambdaMART) with an implicit routing graph and strictly chronological evaluation on Firefox, Chromium and Eclipse; it reached 75.5%, 47.7% and 65.4% Top-1 accuracy against 42.0%, 22.9% and 43.1% for a tossing-graph baseline (under review).</li>
+        <li><b>Prepared</b> the proposal for the TACC Lonestar6 supercomputing allocation (NSF ACCESS) awarded to Dr. Bryce, and run its large-scale transformer experiments as the sole research user.</li>
+        <li><b>Extended and rebuilt</b> the lab's mobile app and server for collecting smartphone context data, and applied sequential rule mining (POERMH, TKE-Rules) to predict frequent context-event sequences for testing context-sensitive mobile apps.</li>
+      </ul>
+      <p><b>Next:</b> routing models that keep up with real teams, handling newcomers with little history, changing teams, developer workload and signals from the code itself.</p>
+      <p class="small muted">Research interests: machine learning for software engineering, automated bug triage and routing, transformer-based natural language processing, learning to rank, mining software repositories, mobile and context-aware systems, and software testing.</p>
     </section>
 
     <section id="publications" aria-labelledby="pubs-h">
