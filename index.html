@@ -342,11 +342,10 @@ p{margin:0 0 14px;max-width:68ch}
 .entries .h{font-weight:600}
 .entries p{margin:4px 0 0;font-size:16px}
 
-.courses{list-style:none;padding:0;margin:10px 0 0;max-width:72ch;display:grid;grid-template-columns:1fr;gap:0 24px}
-@media (min-width:640px){.courses{grid-template-columns:1fr 1fr}}
-.courses li{padding:8px 0;border-top:1px solid var(--rule);font-size:15.5px}
-.courses b{font-weight:600}
-.courses span{color:var(--muted)}
+.duties{list-style:none;padding:0;margin:10px 0 6px;max-width:72ch}
+.duties li{position:relative;padding:7px 0 7px 18px;font-size:16px;line-height:1.55}
+.duties li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.duties b{font-weight:600}
 
 .skills{max-width:72ch;margin:6px 0 0}
 .skills div{display:grid;grid-template-columns:1fr;gap:2px;padding:10px 0;border-top:1px solid var(--rule)}
@@ -565,16 +564,22 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding-top:20px;font-si
 
     <section id="teaching" aria-labelledby="teaching-h">
       <h2 id="teaching-h">Teaching and mentoring</h2>
-      <p>Most of my teaching has been in IT Project Management, a course of 50 to 100 students who go straight on to their senior capstone. I help build the syllabus, assignments and quizzes, run the Canvas course, and work with student teams on planning and leadership, drawing on my own years as a team lead.</p>
-      <ul class="courses">
-        <li><b>CSCE 3055</b> <span>IT Project Management, every fall and spring since Fall 2022 (9 semesters)</span></li>
-        <li><b>CSCE 3444</b> <span>Software Engineering, Summer 2026</span></li>
-        <li><b>CSCE 3530</b> <span>Introduction to Computer Networks, Summer 2024</span></li>
-        <li><b>CSCE 5210</b> <span>Fundamentals of Artificial Intelligence (graduate), Summer 2025</span></li>
-        <li><b>CSCE 5270</b> <span>Computer-Human Interfaces (graduate), Summer 2023</span></li>
+      <p>Graduate Teaching Assistant at UNT since Fall 2022, mainly for IT Project Management, a course of 50 to 100 students per semester that leads directly into the senior capstone.</p>
+      <ul class="duties">
+        <li><b>Research and develop</b> course material, including syllabus content, assignments and quizzes.</li>
+        <li><b>Teach</b> class sessions on project planning, Agile practice, team roles and leadership, drawing on my years as a software team lead.</li>
+        <li><b>Manage</b> the Canvas LMS course site, including course materials, announcements, submissions and grades.</li>
+        <li><b>Assess</b> assignments, quizzes and team projects, and give students clear written feedback.</li>
+        <li><b>Track</b> attendance and monitor student progress throughout the semester.</li>
       </ul>
       <h3>Mentoring</h3>
-      <p>Each summer since 2023 I have mentored undergraduate researchers through the NSF-funded TaMaLe REU site at UNT; the 2025 project won the Best Paper Award at IEEE CCWC 2026. At Field Buzz I ran training sessions for my team on design patterns, clean code, reactive programming and Material UI.</p>
+      <ul class="duties">
+        <li><b>Mentor</b> students one-on-one on coursework and preparation for future job roles.</li>
+        <li><b>Coach</b> student project teams on planning, sharing work fairly and leadership as they prepare for the capstone.</li>
+        <li><b>Guide</b> undergraduate researchers each summer since 2023 through the NSF-funded TaMaLe REU site; the 2025 project won the Best Paper Award at IEEE CCWC 2026.</li>
+        <li><b>Trained</b> my engineering team at Field Buzz in design patterns, clean code, reactive programming and Material UI.</li>
+      </ul>
+      <p class="small muted">Courses supported: CSCE 3055 IT Project Management (9 semesters), CSCE 3444 Software Engineering, CSCE 3530 Introduction to Computer Networks, CSCE 5210 Fundamentals of Artificial Intelligence (graduate) and CSCE 5270 Computer-Human Interfaces (graduate).</p>
     </section>
 
     <section id="skills" aria-labelledby="skills-h">
